@@ -6,10 +6,11 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 instdirs=BINDIR=/usr/bin USRLIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH) MANPATH=/usr/share/man INCDIR=/usr/include PROJECTMANSUFFIX=nas ETCDIR=/etc/nas
 
 %:
-	dh $@ --with=autoreconf --with=autotools_dev
+	dh $@ --with=autoreconf --no-parallel
 
 override_dh_auto_configure:
 	xmkmf -a
+	find . -name Makefile | xargs sed -i 's,-D_BSD_SOURCE -D_SVID_SOURCE,-D_DEFAULT_SOURCE,'
 
 override_dh_auto_build:
 	dh_auto_build -- EXTRA_LDOPTIONS="$$LDFLAGS" \
@@ -29,7 +30,7 @@ override_dh_auto_install:
 	top=`pwd`; $(MAKE) install install.man $(instdirs) DESTDIR=$$top/debian/tmp
 
 override_dh_install:
-	dh_install --fail-missing
+	dh_install
 	rm -f debian/libaudio-dev/usr/include/audio/release.h
 	rm -f debian/nas-bin/usr/bin/nasd \
 	      debian/nas-bin/usr/share/man/man1/nasd.1nas \

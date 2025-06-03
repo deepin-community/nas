@@ -50,7 +50,6 @@
 #define DoDebugLib DebugLibAudio
 #define DoProfileLib ProfileLibAudio
 
-AR = ar cq
 
 /* must include <Library.tmpl> *after* the above 4 lines */
 #include <Library.tmpl>

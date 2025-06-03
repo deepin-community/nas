@@ -27,8 +27,6 @@
 SRCS = Slider.c
 OBJS = Slider.o
 
-AR = ar cq
-
 NormalLibraryTarget(widgets,$(OBJS))
 DependTarget()
 

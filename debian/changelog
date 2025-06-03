@@ -1,8 +1,32 @@
-nas (1.9.4-7) UNRELEASED; urgency=medium
+nas (1.9.4-9) unstable; urgency=medium
 
-  * update
+  * Team upload.
+  * Add patch to fix build failure on mips64el
 
- -- Steve McIntyre <93sam@debian.org>  Thu, 30 Jun 2022 16:46:11 +0800
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 09 May 2024 11:30:10 +0200
+
+nas (1.9.4-8) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + nas-doc: Add Multi-Arch: foreign.
+
+  [ Steve McIntyre ]
+  * Add missing function definitions. Closes: #1066237
+  * Tweak xmkmf output to lose warnings about _BSD_SOURCE and
+    _SVID_SOURCE. #870836 needs fixing in xutils-dev, sigh.
+  * Minor packaging updates:
+    + Update Standards-Version to 4.6.2.
+    + Remove --with=autotools_dev
+    + Switch to debhelper-compat 12
+    + Remove --fail-missing on dh_install
+    + Add --no-parallel
+    + Add Homepage field. Closes: #1020778
+    + Remove build-dep on dh-autoreconf
+  * Add Romanian debconf translation. Closes: #1033081.
+    Thanks to Remus-Gabriel Chelu.
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 17 Mar 2024 21:09:03 +0000
 
 nas (1.9.4-7) unstable; urgency=medium
 

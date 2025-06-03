@@ -1,3 +1,6 @@
 multiarch-AuErrorDB.patch
 snprintf.m4
 Build-the-voxware-server-on-Hurd.patch
+fix-missing-defs.patch
+0005-Drop-ifndef-mips.patch
+auto-gitignore
