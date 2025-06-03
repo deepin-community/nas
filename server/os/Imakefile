@@ -27,8 +27,6 @@
 FILES = WaitFor.c connection.c io.c osinit.c access.c genalloca.c mitauth.c \
 	utils.c auth.c hpsocket.c daemon.c osdep.h
 
-AR = ar cq
-
 #if (SystemV || SystemV4) 
 /* JET - streams are just too problematic.  UNIX/TCP CONN will do fine */
 #undef ConnectionFlags

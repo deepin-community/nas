@@ -32,8 +32,6 @@ XCOMM $NCDId: @(#)Imakefile,v 1.8 1996/04/24 17:04:17 greg Exp $
 SRCS = auvoxware.c config.c 
 OBJS = auvoxware.o config.o 
 
-AR = ar cq
-
     INCLUDES = -I. -I../../include -I../../../include -I../../dia
 
 NormalLibraryObjectRule()

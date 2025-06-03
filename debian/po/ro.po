@@ -1,0 +1,95 @@
+# Mesajele în limba română pentru pachetul nas.
+# Romanian translation of nas.
+# Copyright © 2023 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the nas package.
+#
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2023.
+#
+# Cronologia traducerii fișierului „nas”:
+# Traducerea inițială, făcută de R-GC, pentru versiunea nas 1.9.4-7(2007-09-22).
+# Actualizare a traducerii pentru versiunea Y, făcută de X, Y(anul).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nas 1.9.4-7\n"
+"Report-Msgid-Bugs-To: 93sam@debian.org\n"
+"POT-Creation-Date: 2007-09-22 09:00+0200\n"
+"PO-Revision-Date: 2023-03-04 09:26+0100\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
+"Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && "
+"n%100<=19) ? 1 : 2);\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:2001
+msgid "Should nasd release /dev/dsp?"
+msgstr "Ar trebui «nasd» să elibereze „/dev/dsp”?"
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:2001
+msgid ""
+"By default, the NAS server will open the configured audio device at startup, "
+"and then keep it open until the server is stopped. This will stop any non-NAS-"
+"aware audio clients from using the audio device."
+msgstr ""
+"În mod implicit, serverul NAS va deschide dispozitivul audio configurat la "
+"pornire și apoi îl va menține deschis până când serverul este oprit. Acest "
+"lucru va opri orice client audio care nu este compatibil cu NAS să folosească "
+"dispozitivul audio."
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:2001
+msgid ""
+"The daemon can be configured to release the audio device when it is not using "
+"it, with some delay after the application completes before the device is "
+"available."
+msgstr ""
+"Demonul poate fi configurat să elibereze dispozitivul audio atunci când nu îl "
+"folosește, cu o anumită întârziere după finalizarea aplicației înainte ca "
+"dispozitivul să fie disponibil."
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:2001
+msgid ""
+"An alternative is to use the \"audiooss\" package to wrap any programs that "
+"use /dev/dsp to make them use equivalent NAS calls."
+msgstr ""
+"O alternativă este să utilizați pachetul „audiooss” care interceptează cererile "
+"de program către „/dev/dsp” și le înlocuiește cu apeluri NAS echivalente."
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:3001
+msgid "Should nasd change mixer settings at startup?"
+msgstr "Trebuie «nasd» să modifice configurările mixerului la pornire?"
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:3001
+msgid ""
+"If you choose this option, the NAS server will change the mixer settings at "
+"startup as follows:"
+msgstr ""
+"Dacă alegeți această opțiune, serverul NAS va modifica configurările mixerului "
+"la pornire după cum urmează:"
+
+#. Type: boolean
+#. Description
+#: ../nas.templates:3001
+#, no-c-format
+msgid ""
+" - set PCM volume to 50%;\n"
+" - change the record input device to LINE."
+msgstr ""
+" - stabilește volumul PCM la 50%;\n"
+" - stabilește intrarea LINIE ca dispozitiv de intrare pentru înregistrare."
