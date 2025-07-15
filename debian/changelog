@@ -1,3 +1,9 @@
+nas (1.9.4-9deepin1) unstable; urgency=medium
+
+  * feat: add sw64 support.
+
+ -- hudeng <hudeng@deepin.org>  Tue, 03 Jun 2025 09:07:44 +0800
+
 nas (1.9.4-9) unstable; urgency=medium
 
   * Team upload.

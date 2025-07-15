@@ -1,0 +1,25 @@
+diff --git a/clients/audio/auedit/Graph.c b/clients/audio/auedit/Graph.c
+index 5acd927..c160648 100644
+--- a/clients/audio/auedit/Graph.c
++++ b/clients/audio/auedit/Graph.c
+@@ -163,7 +163,7 @@ GraphWidget     w;
+ unsigned int    which;
+ {
+     XGCValues       gcv;
+-#if !defined(__alpha__) && !defined(__x86_64__) && !defined(__ia64__) && !defined(__LP64__)
++#if !defined(__alpha__) && !defined(__sw_64__) && !defined(__x86_64__) && !defined(__ia64__) && !defined(__LP64__)
+     unsigned long   commonMask;
+ #else /* __alpha */
+     unsigned int  commonMask;
+diff --git a/lib/audio/Amd.h b/lib/audio/Amd.h
+index 4b4367f..b5495f6 100644
+--- a/lib/audio/Amd.h
++++ b/lib/audio/Amd.h
+@@ -115,6 +115,7 @@ SOFTWARE.
+ #define WORD64				/* 64-bit architecture */
+ #endif
+ #if defined (_LP64) || \
++    defined(__sw_64) || defined(__sw_64__) || \
+     defined(__alpha) || defined(__alpha__) || \
+     defined(__ia64__) || defined(ia64) || \
+     defined(__sparc64__) || \
